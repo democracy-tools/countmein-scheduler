@@ -52,15 +52,12 @@ func getTemplate() (string, error) {
 	now := time.Now().In(isr)
 	nowHour := now.Hour()
 	nowMin := now.In(isr).Minute()
-	if (nowHour == 13 && nowMin > 30) || (nowHour == 13 && nowMin < 40) {
+	if (nowHour == 19 && nowMin > 57) || (nowHour == 20 && nowMin < 3) {
 		return "count", nil
 	}
-	// if (nowHour == 19 && nowMin > 57) || (nowHour == 20 && nowMin < 3) {
-	// 	return "count", nil
-	// }
-	// if nowHour == 20 && nowMin > 28 && nowMin < 33 {
-	// 	return "count2", nil
-	// }
+	if nowHour == 20 && nowMin > 28 && nowMin < 33 {
+		return "count2", nil
+	}
 
 	err = fmt.Errorf("invalid reminder time minute '%d:%d'", nowHour, nowMin)
 	logrus.Error(err.Error())
