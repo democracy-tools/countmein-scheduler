@@ -18,18 +18,6 @@ steps:
       - push
       - '$_GCR_HOSTNAME/$PROJECT_ID/$REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA'
     id: Push
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
-    args:
-      - beta
-      - run
-      - jobs
-      - update
-      - $_SERVICE_NAME
-      - '--image=$_GCR_HOSTNAME/$PROJECT_ID/$REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA'
-      - '--region=$_DEPLOY_REGION'
-      - '--quiet'
-    id: Deploy
-    entrypoint: gcloud
 images:
   - '$_GCR_HOSTNAME/$PROJECT_ID/$REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA'
 options:
