@@ -8,7 +8,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/democracy-tools/countmein-scheduler/internal/env"
+	"github.com/democracy-tools/go-common/env"
 	"github.com/sirupsen/logrus"
 )
 

@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/democracy-tools/countmein-scheduler/internal/ds"
-	"github.com/democracy-tools/countmein-scheduler/internal/env"
 	"github.com/democracy-tools/countmein-scheduler/internal/whatsapp"
+	"github.com/democracy-tools/go-common/env"
 	"github.com/sirupsen/logrus"
 )
 

@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/democracy-tools/countmein-scheduler/internal"
-	"github.com/democracy-tools/countmein-scheduler/internal/slack"
+	"github.com/democracy-tools/go-common/slack"
 )
 
 func main() {
