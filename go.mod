@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	cloud.google.com/go/datastore v1.11.0
-	github.com/democracy-tools/go-common v0.0.1
+	github.com/democracy-tools/go-common v0.0.2
 	github.com/sirupsen/logrus v1.9.0
 	github.com/stretchr/testify v1.8.2
 	golang.org/x/oauth2 v0.7.0
